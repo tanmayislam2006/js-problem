@@ -11,3 +11,6 @@ function checkEvenOdd(num) {
     return "Odd";
   }
 }
+function reverseString(str) {
+  return str.split("").reverse().join("");
+}
