@@ -14,3 +14,6 @@ function checkEvenOdd(num) {
 function reverseString(str) {
   return str.split("").reverse().join("");
 }
+function findMaximum(a, b, c) {
+  return Math.max(a, b, c);
+}
