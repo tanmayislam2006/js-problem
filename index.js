@@ -39,3 +39,18 @@ function isPalindrome(str) {
   const cleaned = str.replace(/[^A-Za-z0-9]/g, "").toLowerCase();
   return cleaned === cleaned.split("").reverse().join("");
 }
+function simpleCalculator(a, b, operation) {
+  switch (operation) {
+    case "add":
+      return a + b;
+    case "subtract":
+      return a - b;
+    case "multiply":
+      return a * b;
+    case "divide":
+      if (b !== 0) return a / b;
+      return undefined;
+    default:
+      return undefined;
+  }
+}
