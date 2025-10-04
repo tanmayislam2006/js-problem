@@ -58,3 +58,13 @@ function countVowels(str) {
   const matches = str.match(/[aeiou]/gi);
   return matches ? matches.length : 0;
 }
+function findLongestWord(str) {
+  const words = str.split(" ");
+  let longestWord = "";
+  for (let word of words) {
+    if (word.length > longestWord.length) {
+      longestWord = word;
+    }
+  }
+  return longestWord;
+}
