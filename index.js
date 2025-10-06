@@ -78,3 +78,6 @@ function titleCase(str) {
 function arraySum(arr) {
   return arr.reduce((acc, curr) => acc + curr, 0);
 }
+function removeDuplicates(arr) {
+  return [...new Set(arr)];
+}
