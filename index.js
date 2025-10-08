@@ -85,3 +85,8 @@ function removeDuplicates(arr) {
 function mergeArrays(arr1, arr2) {
   return [...arr1, ...arr2];
 }
+function findMissingNumber(arr, n) {
+  const expectedSum = (n * (n + 1)) / 2;
+  const actualSum = arr.reduce((acc, curr) => acc + curr, 0);
+  return expectedSum - actualSum;
+}
