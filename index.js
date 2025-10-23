@@ -102,16 +102,13 @@ function twoSum(arr, target) {
   return null;
 }
 // Clock Angle
-function twoSum(arr, target) {
-  const numMap = new Map();
-  for (let i = 0; i < arr.length; i++) {
-    const complement = target - arr[i];
-    if (numMap.has(complement)) {
-      return [numMap.get(complement), i];
-    }
-    numMap.set(arr[i], i);
+function clockAngle(hours, minutes) {
+  if (hours < 0 || minutes < 0 || hours > 12 || minutes > 59) {
+    return "Invalid input";
   }
-  return null;
+
+  const hourAngle = (hours % 12) * 30 + minutes * 0.5;
+  const minuteAngle = minutes * 6;
+  const angle = Math.abs(hourAngle - minuteAngle);
+  return Math.min(angle, 360 - angle);
 }
-
-
