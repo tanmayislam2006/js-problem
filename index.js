@@ -112,3 +112,13 @@ function clockAngle(hours, minutes) {
   const angle = Math.abs(hourAngle - minuteAngle);
   return Math.min(angle, 360 - angle);
 }
+// Debounce Function
+function debounce(func, delay) {
+  let timeoutId;
+  return function(...args) {
+    clearTimeout(timeoutId);
+    timeoutId = setTimeout(() => {
+      func.apply(this, args);
+    }, delay);
+  };
+}
